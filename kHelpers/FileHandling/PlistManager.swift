@@ -34,20 +34,7 @@ struct Plist {
         return (dir as NSString).appendingPathComponent("\(name).plist")
     }
     
-    var destPath:String? {
-        guard sourcePath != .none else { return .none }
-        let dir = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)[0]
-        let appFolder = (dir as NSString).appendingPathComponent("\(App.name.rawValue)")
-        var isDir: ObjCBool = false
-        if false == fileManager.fileExists(atPath: appFolder, isDirectory: &isDir) {
-            do {
-                try fileManager.createDirectory(atPath: appFolder, withIntermediateDirectories: true, attributes: nil)
-            } catch let error as NSError {
-                print("Error: \(error.localizedDescription)")
-            }
-        }
-        return (appFolder as NSString).appendingPathComponent("/\(name).plist")
-    }
+    
     
     init?(name:String, forUseInIos:Bool) {
         
