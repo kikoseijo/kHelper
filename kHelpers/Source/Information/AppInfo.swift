@@ -10,7 +10,7 @@ import Foundation
 
 
 
-func getAppInfoDiccionary(){
+public func getAppInfoDiccionary(){
     let nsObject: AnyObject? = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as AnyObject?
     print(nsObject ?? "")
 }

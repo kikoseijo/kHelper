@@ -88,7 +88,7 @@ struct Plist {
     
 }
 
-class PlistManager {
+public class PlistManager {
     static let sharedInstance = PlistManager()
     private init() {}
     private var plistName:String = ""
