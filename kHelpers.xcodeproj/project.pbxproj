@@ -50,7 +50,7 @@
 		92B094B21E16B421001F47AA /* kHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				92B094C81E16C050001F47AA /* Classes */,
+				92B094C81E16C050001F47AA /* Source */,
 				92B094B31E16B421001F47AA /* kHelpers.h */,
 				92B094B41E16B421001F47AA /* Info.plist */,
 			);
@@ -73,13 +73,13 @@
 			name = Information;
 			sourceTree = "<group>";
 		};
-		92B094C81E16C050001F47AA /* Classes */ = {
+		92B094C81E16C050001F47AA /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				92B094BF1E16B8DA001F47AA /* Information */,
 				92B094BC1E16B47E001F47AA /* FileHandling */,
 			);
-			name = Classes;
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
