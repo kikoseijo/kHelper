@@ -28,6 +28,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'kHelpers/Source/*/*.swift'
 
-  s.source       = { :git => "https://github.com/kikoseijo/kHelper.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/kikoseijo/kHelper.git", :branch => "production", :tag => "#{s.version}" }
 
 end
