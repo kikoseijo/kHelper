@@ -14,7 +14,7 @@
 
 /* Begin PBXFileReference section */
 		92B094B01E16B421001F47AA /* kHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92B094B31E16B421001F47AA /* kHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kHelpers.h; sourceTree = "<group>"; };
+		92B094B31E16B421001F47AA /* kHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kHelpers.h; path = Source/kHelpers.h; sourceTree = "<group>"; };
 		92B094B41E16B421001F47AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92B094BD1E16B4AC001F47AA /* PlistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlistManager.swift; path = Source/FileHandling/PlistManager.swift; sourceTree = "<group>"; };
 		92B094C01E16B8E9001F47AA /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppInfo.swift; path = Source/Information/AppInfo.swift; sourceTree = "<group>"; };
@@ -51,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				92B094C81E16C050001F47AA /* Source */,
-				92B094B31E16B421001F47AA /* kHelpers.h */,
 				92B094B41E16B421001F47AA /* Info.plist */,
 			);
 			path = kHelpers;
@@ -76,6 +75,7 @@
 		92B094C81E16C050001F47AA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				92B094B31E16B421001F47AA /* kHelpers.h */,
 				92B094BF1E16B8DA001F47AA /* Information */,
 				92B094BC1E16B47E001F47AA /* FileHandling */,
 			);
