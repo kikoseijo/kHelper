@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		92B094B51E16B421001F47AA /* kHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B094B31E16B421001F47AA /* kHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92B094BE1E16B4AC001F47AA /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B094BD1E16B4AC001F47AA /* PlistManager.swift */; };
+		92B094BE1E16B4AC001F47AA /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B094BD1E16B4AC001F47AA /* DateFunctions.swift */; };
 		92B094C11E16B8E9001F47AA /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B094C01E16B8E9001F47AA /* AppInfo.swift */; };
 		92B094CD1E16CE6C001F47AA /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B094CA1E16CE6C001F47AA /* NetworkTools.swift */; };
 		92B094CE1E16CE6C001F47AA /* TextGui.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B094CC1E16CE6C001F47AA /* TextGui.swift */; };
+		92B094D11E16D670001F47AA /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B094D01E16D670001F47AA /* DateFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		92B094B01E16B421001F47AA /* kHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B094B31E16B421001F47AA /* kHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kHelpers.h; path = Source/kHelpers.h; sourceTree = "<group>"; };
 		92B094B41E16B421001F47AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92B094BD1E16B4AC001F47AA /* PlistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlistManager.swift; path = Source/FileHandling/PlistManager.swift; sourceTree = "<group>"; };
+		92B094BD1E16B4AC001F47AA /* DateFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFunctions.swift; path = Source/Date/DateFunctions.swift; sourceTree = "<group>"; };
 		92B094C01E16B8E9001F47AA /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppInfo.swift; path = Source/Information/AppInfo.swift; sourceTree = "<group>"; };
 		92B094CA1E16CE6C001F47AA /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		92B094CC1E16CE6C001F47AA /* TextGui.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextGui.swift; sourceTree = "<group>"; };
+		92B094D01E16D670001F47AA /* DateFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFunctions.swift; path = Source/Date/DateFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,7 @@
 		92B094BC1E16B47E001F47AA /* FileHandling */ = {
 			isa = PBXGroup;
 			children = (
-				92B094BD1E16B4AC001F47AA /* PlistManager.swift */,
+				92B094BD1E16B4AC001F47AA /* DateFunctions.swift */,
 			);
 			name = FileHandling;
 			sourceTree = "<group>";
@@ -79,6 +81,7 @@
 		92B094C81E16C050001F47AA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				92B094CF1E16D657001F47AA /* Date */,
 				92B094B31E16B421001F47AA /* kHelpers.h */,
 				92B094C91E16CE6C001F47AA /* Network */,
 				92B094CB1E16CE6C001F47AA /* Text */,
@@ -104,6 +107,14 @@
 			);
 			name = Text;
 			path = Source/Text;
+			sourceTree = "<group>";
+		};
+		92B094CF1E16D657001F47AA /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				92B094D01E16D670001F47AA /* DateFunctions.swift */,
+			);
+			name = Date;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +197,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B094BE1E16B4AC001F47AA /* PlistManager.swift in Sources */,
+				92B094BE1E16B4AC001F47AA /* DateFunctions.swift in Sources */,
 				92B094C11E16B8E9001F47AA /* AppInfo.swift in Sources */,
 				92B094CE1E16CE6C001F47AA /* TextGui.swift in Sources */,
+				92B094D11E16D670001F47AA /* DateFunctions.swift in Sources */,
 				92B094CD1E16CE6C001F47AA /* NetworkTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

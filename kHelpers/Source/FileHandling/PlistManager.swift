@@ -29,9 +29,27 @@ struct Plist {
     }
     
     var destPath:String? {
+        
         guard sourcePath != .none else { return .none }
-        let dir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        return (dir as NSString).appendingPathComponent("\(name).plist")
+        
+        if forIos {
+            let dir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            return (dir as NSString).appendingPathComponent("\(name).plist")
+        } else {
+            let bundleName = getAppBundleName()
+            let dir = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)[0]
+            let appFolder = (dir as NSString).appendingPathComponent("\(bundleName)")
+            var isDir: ObjCBool = false
+            if false == fileManager.fileExists(atPath: appFolder, isDirectory: &isDir) {
+                do {
+                    try fileManager.createDirectory(atPath: appFolder, withIntermediateDirectories: true, attributes: nil)
+                } catch let error as NSError {
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
+            return (appFolder as NSString).appendingPathComponent("/\(name).plist")
+        }
+        
     }
     
     
@@ -89,18 +107,18 @@ struct Plist {
 }
 
 public class PlistManager {
-    static let sharedInstance = PlistManager()
+    public static let sharedInstance = PlistManager()
     private init() {}
     private var plistName:String = ""
     private var forIos:Bool = true
     
-    func startPlistManager(_ plistFileName:String, forIos:Bool=true) {
+    public func startPlistManager(_ plistFileName:String, forIos:Bool=true) {
         if let _ = Plist(name: plistFileName, forUseInIos:forIos) {
             print("[PlistManager] PlistManager started")
         }
     }
     
-    func addNewItemWithKey(key:String, value:AnyObject) {
+    public func addNewItemWithKey(key:String, value:AnyObject) {
         print("[PlistManager] Starting to add item for key '\(key) with value '\(value)' . . .")
         if !keyAlreadyExists(key: key) {
             if let plist = Plist(name: plistName, forUseInIos:forIos) {
@@ -123,7 +141,7 @@ public class PlistManager {
         
     }
     
-    func removeItemForKey(key:String) {
+    public func removeItemForKey(key:String) {
         print("[PlistManager] Starting to remove item for key '\(key) . . .")
         if keyAlreadyExists(key: key) {
             if let plist = Plist(name: plistName, forUseInIos:forIos) {
@@ -146,7 +164,7 @@ public class PlistManager {
         
     }
     
-    func removeAllItemsFromPlist() {
+    public func removeAllItemsFromPlist() {
         
         if let plist = Plist(name: plistName, forUseInIos:forIos) {
             
@@ -171,7 +189,7 @@ public class PlistManager {
         }
     }
     
-    func saveValue(value:AnyObject, forKey:String) {
+    public func saveValue(value:AnyObject, forKey:String) {
         
         if let plist = Plist(name: plistName, forUseInIos:forIos) {
             
@@ -198,7 +216,7 @@ public class PlistManager {
         }
     }
     
-    func getValueForKey(key:String) -> AnyObject? {
+    public func getValueForKey(key:String) -> AnyObject? {
         var value:AnyObject?
         
         
@@ -241,7 +259,7 @@ public class PlistManager {
         
     }
     
-    func keyAlreadyExists(key:String) -> Bool {
+    public func keyAlreadyExists(key:String) -> Bool {
         var keyExists = false
         
         if let plist = Plist(name: plistName, forUseInIos:forIos) {
