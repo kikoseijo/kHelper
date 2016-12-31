@@ -9,7 +9,7 @@
 import Foundation
 
 
-public func getTheDate(_ format:String = "yyyy-MM-dd H:i:s") -> String
+public func getTheDate(_ format:String = "yyyy-MM-dd HH:mm:ss") -> String
 {
     let date = Date()
     let formatter = DateFormatter()
