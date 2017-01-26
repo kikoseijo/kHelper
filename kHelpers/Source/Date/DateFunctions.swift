@@ -16,3 +16,11 @@ public func getTheDate(_ format:String = "yyyy-MM-dd HH:mm:ss") -> String
     formatter.dateFormat = format
     return formatter.string(from: date)
 }
+
+
+public func getStringDate(_ date: NSDate) -> String
+{
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    return formatter.string(from: date as Date)
+}
