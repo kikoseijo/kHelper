@@ -52,7 +52,7 @@ public class RoundedImageView: UIImageView {
         let frameLayer = CAShapeLayer()
         frameLayer.path = path.cgPath
         frameLayer.lineWidth = 32.0
-        frameLayer.strokeColor = UIColor.white.cgColor
+        frameLayer.strokeColor = UIColor.black.cgColor
         frameLayer.fillColor = nil
         
         // if we had previous border remove it, add new one, and save reference to new one
