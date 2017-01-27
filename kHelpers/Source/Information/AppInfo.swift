@@ -9,14 +9,18 @@
 import Foundation
 
 
-
-
 public func getAppBundleName() ->String {
     let bundleName: AnyObject? = Bundle.main.infoDictionary?["CFBundleName"] as AnyObject?
    return bundleName as! String
 }
 
-
+public func showAlertWith(title: String, andMsg msg: String, inController controller: UIViewController){
+    
+    let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+    let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    alertController.addAction(OKAction)
+    controller.present(alertController, animated: true, completion: nil)
+}
     
 
 

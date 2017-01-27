@@ -9,11 +9,21 @@
 import Foundation
 
 
-public func getTheDate(_ format:String = "yyyy-MM-dd HH:mm:ss") -> String
-{
-    let date = Date()
+public func getTheDate(_ format:String = "yyyy-MM-dd HH:mm:ss",
+                       fromDate date:Date = Date(),
+                       locale:String = "es_ES",
+                       style:DateFormatter.Style = .short) -> String {
     let formatter = DateFormatter()
-    formatter.dateFormat = format
+    formatter.locale = Locale(identifier: locale)
+    
+    if format != "" {
+         formatter.dateFormat =  format
+    } else {
+        formatter.dateStyle = style
+        formatter.timeStyle = .none
+    }
+    
+    
     return formatter.string(from: date)
 }
 
