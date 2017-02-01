@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 
-  s.name         = "kHelper"
+  s.name         = "kHelpers"
   s.version      = "0.0.1"
   s.summary      = "Swift class to."
 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   Swift 3.0 tools for convenience.
                    DESC
 
-  s.homepage     = "https://github.com/kikoseijo/kHelper"
+  s.homepage     = "https://github.com/kikoseijo/kHelpers"
   s.license      = "MIT (team)"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Kiko Seijo" => "kiko@sunnyface.com" }
@@ -28,6 +28,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'kHelpers/Source/*/*.swift'
 
-  s.source       = { :git => "https://github.com/kikoseijo/kHelper.git", :branch => "production", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/kikoseijo/kHelpers.git", :branch => "production", :tag => "#{s.version}" }
 
 end
