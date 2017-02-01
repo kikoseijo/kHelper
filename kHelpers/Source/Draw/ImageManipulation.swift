@@ -27,6 +27,33 @@ public func maskRounded(image: UIImage, withRadius radius: Float) -> UIImage {
     return roundedImage!
 }
 
+public extension CGSize {
+    
+    func resizeFill(toSize: CGSize) -> CGSize {
+        
+        let scale : CGFloat = (self.height / self.width) < (toSize.height / toSize.width) ? (self.height / toSize.height) : (self.width / toSize.width)
+        return CGSize(width: (self.width / scale), height: (self.height / scale))
+        
+    }
+}
+
+public extension UIImage {
+    
+    func scale(toSize newSize:CGSize) -> UIImage {
+        
+        // make sure the new size has the correct aspect ratio
+        let aspectFill = self.size.resizeFill(toSize: newSize)
+        
+        UIGraphicsBeginImageContextWithOptions(aspectFill, false, 0.0);
+        self.draw(in: CGRect(origin: CGPoint(x:0, y:0), size: CGSize(width:aspectFill.width, height:aspectFill.height)))
+        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+    
+}
+
 public class RoundedImageView: UIImageView {
     
     /// saved rendition of border layer
