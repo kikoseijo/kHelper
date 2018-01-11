@@ -34,3 +34,5 @@ public func getStringDate(_ date: NSDate) -> String
     formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
     return formatter.string(from: date as Date)
 }
+
+

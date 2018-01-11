@@ -14,6 +14,7 @@
 		92B094C11E16B8E9001F47AA /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B094C01E16B8E9001F47AA /* AppInfo.swift */; };
 		92B094CD1E16CE6C001F47AA /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B094CA1E16CE6C001F47AA /* NetworkTools.swift */; };
 		92B094CE1E16CE6C001F47AA /* TextGui.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B094CC1E16CE6C001F47AA /* TextGui.swift */; };
+		92B1015A2007C2A5000F63AE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B101592007C2A5000F63AE /* Utils.swift */; };
 		92BC7B351E425AE300A96701 /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC7B341E425AE300A96701 /* PlistManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		92B094C01E16B8E9001F47AA /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppInfo.swift; path = Source/Information/AppInfo.swift; sourceTree = "<group>"; };
 		92B094CA1E16CE6C001F47AA /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		92B094CC1E16CE6C001F47AA /* TextGui.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextGui.swift; sourceTree = "<group>"; };
+		92B101592007C2A5000F63AE /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		92BC7B341E425AE300A96701 /* PlistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlistManager.swift; path = Source/FileHandling/PlistManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,6 +48,7 @@
 			children = (
 				92AF4E5E1E3AB131007AA3B5 /* ImageManipulation.swift */,
 				92AF4E751E3ACA49007AA3B5 /* Maths.swift */,
+				92B101592007C2A5000F63AE /* Utils.swift */,
 			);
 			name = Draw;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				92AF4E571E3AA2E5007AA3B5 /* DateFunctions.swift in Sources */,
 				92B094CE1E16CE6C001F47AA /* TextGui.swift in Sources */,
 				92B094CD1E16CE6C001F47AA /* NetworkTools.swift in Sources */,
+				92B1015A2007C2A5000F63AE /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
